@@ -79,7 +79,7 @@
                         $Message=$_GET['success'];
                         $Message=" User registered successfully ";
                     ?>
-                        <div class="alert alert-danger text-center"><?php echo $Message ?></div>
+                        <div class="alert alert-success text-center"><?php echo $Message ?></div>
                     <?php        
                     }
                     ?>    
@@ -92,7 +92,7 @@
                         <input type="Number" name="Mobile" placeholder="Mobile" class="form-control my-2">
                         <input type="Number" name="NIC_No" placeholder="National ID" class="form-control my-2">
                         <input type="Number" name="Acc_No" placeholder="Bank Account No." class="form-control my-2">
-                        <input type="text" name="Password" placeholder="Password" class="form-control">
+                        <input type="password" name="Password" placeholder="Password" class="form-control">
                         <button class="btn btn-success mt-4" name="signup">Sign Up</button>
                     </form>
                 </div>

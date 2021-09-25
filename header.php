@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +17,25 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <form class="d-flex">
       <ul class="nav navbar">
-                <li class="nav-item me-4"><a href="logindesign.php" class="btn btn-outline-light">Login</a></li>
-                <li class="nav-item"><a href="signupdesign.php" class="btn btn-outline-light">SignUp</a></li>
+
+      <?php 
+
+              if(isset($_SESSION['U_ID']))
+              {
+                  echo    '<form action="includes/logout.php" method="POST">
+                              <li class="nav-item"><button type="submit" name="logout" class="btn btn-outline-light">Logout</button></li>
+                          </form>';
+              }
+              else
+              {
+                  echo '  <li class="nav-item"><a href="logindesign.php" class="btn btn-outline-light me-4">Login</a></li>
+                  <li class="nav-item"><a href="signupdesign.php" class="btn btn-outline-light ml-3">Sign Up</a></li>';
+              }
+
+      ?>
+
             </ul>
-      </form>
     </div>
   </div>
 </nav>

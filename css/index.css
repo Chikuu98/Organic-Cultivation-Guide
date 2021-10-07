@@ -1,0 +1,459 @@
+    html,
+    body {
+        margin: 0%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        background: #198754;
+    }
+    /* ------------------home-cover-------------- */
+    
+    .containeerhc {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../assets/home-img/background.jpg) !important;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .rowh {
+        display: flex;
+        height: 88%;
+        align-items: center;
+        padding-left: 8%;
+        padding-right: 8%;
+        align-content: center;
+    }
+    
+    .colh {
+        flex-basis: 50%;
+        margin-right: 55px;
+        align-content: center;
+        padding-left: 35px;
+    }
+    
+    .h1title {
+        color: #ffffff;
+        font-size: 95px;
+        font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 0;
+    }
+    
+    .p-cover {
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 15px;
+        font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .btn-home {
+        width: 170px;
+        color: rgb(3, 65, 23);
+        font-size: 15px;
+        padding: 12px 0;
+        background: #ffffff;
+        border: 0;
+        border-radius: 20px;
+        outline: none;
+        margin-top: 30px;
+        font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: inherit;
+    }
+    
+    .btn-home:hover {
+        background: linear-gradient(to right, #56ab2f, #a8e063);
+        transition: 0.5s;
+        color: black;
+    }
+    
+    .card {
+        width: 185px;
+        height: 210px;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 15px 25px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 10px 15px;
+        background-position: center;
+        background-size: cover;
+        transition: transform 0.5s;
+    }
+    
+    .card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .cd1 {
+        background-image: url(../assets/home-img/pic1.gif);
+    }
+    
+    .cd2 {
+        background-image: url(../assets/home-img/pic2.jpg);
+    }
+    
+    .cd4 {
+        background-image: url(../assets/home-img/pic3.gif);
+    }
+    
+    .cd3 {
+        background-image: url(../assets/home-img/pic4.jpg);
+    }
+    
+    .cd1,
+    .cd4 h5 {
+        color: #ffffff;
+    }
+    
+    .card .p-cover {
+        font-size: 8px;
+        text-align: center;
+    }
+    
+    @media only screen and (max-width: 750px) {
+        .h1title {
+            color: #ffffff;
+            font-size: 50px;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+        .p-cover {
+            color: #ffffff;
+            font-size: 12px;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin-top: 300px;
+        }
+        .btn-home {
+            width: 150px;
+            color: #000;
+            font-size: 12px;
+            padding: 12px 15px;
+            background: #ffffff;
+            border: 0;
+            border-radius: 20px;
+            outline: none;
+            margin-top: 15px;
+            align-content: center;
+        }
+        .btn-home:hover {
+            background: linear-gradient(to right, #56ab2f, #a8e063);
+            transition: 0.5s;
+            color: black;
+        }
+        .rowh {
+            flex-direction: column;
+        }
+        .colc {
+            visibility: hidden;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        .colh {
+            padding-left: 0px;
+            margin-right: 35px;
+        }
+    }
+    /* -------x------- home-cover ---------x----- */
+    /* --------------- ABOUT --------------- */
+    
+    .h1about {
+        text-align: center;
+        margin: 50px auto 150px !important;
+        color: white;
+        font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+        align-content: center;
+    }
+    
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+    
+    .maina {
+        width: 100%;
+        min-height: 380px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .service {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        margin-right: 30px;
+        height: 350px;
+        box-shadow: 0 0 20px -15px #013320;
+        transition: transform .8s;
+    }
+    
+    .rowa {
+        margin-right: 30px;
+        margin-left: 60px;
+        margin-bottom: 30px;
+        font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+    }
+    
+    .cola {
+        width: 33.33%;
+    }
+    
+    .service-logo {
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        margin: -90px auto 0;
+        background: #fff;
+        border: 18px solid #198754;
+    }
+    
+    .service-logo img {
+        width: 60px;
+        margin-top: 30px;
+    }
+    
+    .h4about {
+        height: 35px;
+        width: 200px;
+        background: #fff;
+        margin: 50px auto 10px;
+        position: relative;
+    }
+    
+    .h4about::after {
+        content: '';
+        width: 40px;
+        height: 30px;
+        background: linear-gradient(to right, #fff, #198754);
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        z-index: -1;
+    }
+    
+    .h4about::before {
+        content: '';
+        width: 40px;
+        height: 30px;
+        background: linear-gradient(to right, #198754, #fff);
+        position: absolute;
+        left: -5px;
+        bottom: -5px;
+        z-index: -1;
+    }
+    
+    .maina:hover .service {
+        transform: translateY(-50px);
+    }
+    
+    @media only screen and (max-width: 700px) {
+        .rowa {
+            display: inline-block;
+        }
+        .maina {
+            margin-bottom: 100px;
+        }
+    }
+    /* --------------- footer --------------- */
+    
+    footer {
+        width: 100%;
+        bottom: 0;
+        background: linear-gradient(to right, #0e1310, #0f572a, #03a113);
+        color: #fff;
+        padding: 60px 0 30px;
+        border-top-left-radius: 125px;
+        font-size: 13px;
+        line-height: 20px;
+        font-family: 'poppins', sans-serif;
+    }
+    
+    .rowf {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .colf {
+        flex-basis: 25%;
+        padding: 10px;
+    }
+    
+    .colf:nth-child(2),
+    .colf:nth-child(3) {
+        flex-basis: 15%;
+    }
+    
+    .logof {
+        width: 80px;
+        margin-bottom: 30px;
+    }
+    
+    .colf h3 {
+        width: fit-content;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .email-idf {
+        width: fit-content;
+        border-bottom: 1px solid #ccc;
+        margin: 20px 0;
+    }
+    
+    .ulf {
+        padding: 0 0 0 0;
+    }
+    
+    .ulf .lif {
+        list-style: none;
+        margin-bottom: 12px;
+    }
+    
+    .ulf .lif .af {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .frmf {
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 50px;
+    }
+    
+    .frmf input {
+        width: 100%;
+        background: transparent;
+        color: rgb(236, 234, 234);
+        border: 0;
+        outline: none;
+    }
+    
+    .frmf button {
+        background: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .frmf button .fas {
+        font-size: 16px;
+        color: #ccc;
+    }
+    
+    .social-iconsf .fab {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        margin-right: 6px;
+    }
+    
+    .hrf {
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin: 20px auto;
+    }
+    
+    .copyrightf {
+        text-align: center;
+    }
+    
+    .underlinef {
+        width: 100%;
+        height: 5px;
+        background: #767676;
+        border-radius: 3px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        overflow: hidden;
+    }
+    
+    .underlinef .spanf {
+        width: 15px;
+        height: 100%;
+        background: #fff;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        animation: moving 2s linear infinite;
+    }
+    
+    @keyframes moving {
+        0% {
+            left: -20px;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+    
+    .logof,
+    .h3f,
+    .pf,
+    .email-idf,
+    .copyrightf {
+        color: #fff;
+        font-family: 'poppins', sans-serif;
+    }
+    
+    .h3f,
+    .logof {
+        font-size: 15px;
+    }
+    
+    @media (max-width:700px) {
+        footer {
+            bottom: unset;
+        }
+        .colf {
+            flex-basis: 100%;
+        }
+        .colf:nth-child(2),
+        .colf:nth-child(3) {
+            flex-basis: 100%;
+        }
+        .copyrightf {
+            text-align: center;
+            font-size: 1.5vh;
+        }
+    }
+    
+    .move-up {
+        text-align: right;
+        padding-right: 50px;
+    }
+    /* -------x------- footer ---------x----- */

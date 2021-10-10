@@ -8,7 +8,7 @@
                     <h3 class="text-center py-2">Login Form</h3>
                 </div>
 
-                <!-----Cheking input fields empty?------->
+                <!-----Cheking input fields empty?----->
                 <?php
 
                     if(isset($_GET['empty']))

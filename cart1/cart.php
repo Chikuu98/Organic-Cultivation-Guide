@@ -5,12 +5,12 @@ session_start();
 require_once ("php/ConnectDb.php");
 require_once ("php/component.php");
 
-$db = new ConnectDb("Productdb", "Producttb");
+$db = new ConnectDb("final_project", "itemtb");
 
 if (isset($_POST['remove'])){
   if ($_GET['action'] == 'remove'){
       foreach ($_SESSION['cart'] as $key => $value){
-          if($value["product_id"] == $_GET['id']){
+          if($value["itemid"] == $_GET['id']){
               unset($_SESSION['cart'][$key]);
               echo "<script>alert('Product has been Removed...!')</script>";
               echo "<script>window.location = 'cart.php'</script>";
@@ -18,7 +18,6 @@ if (isset($_POST['remove'])){
       }
   }
 }
-
 
 ?>
 
@@ -56,14 +55,14 @@ if (isset($_POST['remove'])){
 
                 $total = 0;
                     if (isset($_SESSION['cart'])){
-                        $product_id = array_column($_SESSION['cart'], 'product_id');
+                        $item_id = array_column($_SESSION['cart'], 'itemid');
 
                         $result = $db->getData();
                         while ($row = mysqli_fetch_assoc($result)){
-                            foreach ($product_id as $id){
-                                if ($row['id'] == $id){
-                                    cartElement($row['product_image'], $row['product_name'],$row['product_price'], $row['id']);
-                                    $total = $total + (int)$row['product_price'];
+                            foreach ($item_id as $id){
+                                if ($row['item_id'] == $id){
+                                    cartElement($row['item_image'], $row['item_name'],$row['item_price'], $row['item_id']);
+                                    $total = $total + (int)$row['item_price'];
                                 }
                             }
                         }

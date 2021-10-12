@@ -13,8 +13,8 @@ class ConnectDb
 
         // class constructor
     public function __construct(
-        $dbname = "Newdb",
-        $tablename = "Productdb",
+        $dbname = "final_project",
+        $tablename = "itemtb",
         $servername = "localhost",
         $username = "root",
         $password = ""

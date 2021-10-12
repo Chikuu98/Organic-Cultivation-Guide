@@ -6,23 +6,23 @@ require_once ('php/ConnectDb.php');
 require_once ('./php/component.php');
 
 
-// create instance of Createdb class
-$database = new ConnectDb("Productdb", "Producttb");
+// create instance of Connectdb class
+$database = new ConnectDb("final_project", "itemtb");
 
 if (isset($_POST['add'])){
-    /// print_r($_POST['product_id']);
+
     if(isset($_SESSION['cart'])){
 
-        $item_array_id = array_column($_SESSION['cart'], "product_id");
+        $item_array_id = array_column($_SESSION['cart'], "itemid");
 
-        if(in_array($_POST['product_id'], $item_array_id)){
+        if(in_array($_POST['itemid'], $item_array_id)){
             echo "<script>alert('Product is already added in the cart..!')</script>";
             echo "<script>window.location = 'cindex.php'</script>";
         }else{
 
             $count = count($_SESSION['cart']);
             $item_array = array(
-                'product_id' => $_POST['product_id']
+                'itemid' => $_POST['itemid']
             );
 
             $_SESSION['cart'][$count] = $item_array;
@@ -31,12 +31,12 @@ if (isset($_POST['add'])){
     }else{
 
         $item_array = array(
-                'product_id' => $_POST['product_id']
+                'itemid' => $_POST['itemid']
         );
 
         //  ------Create new session variable-----
         $_SESSION['cart'][0] = $item_array;
-        print_r($_SESSION['cart']);
+        // print_r($_SESSION['cart']);
     }
 }
 
@@ -69,7 +69,7 @@ if (isset($_POST['add'])){
             <?php
                 $result = $database->getData();
                 while ($row = mysqli_fetch_assoc($result)){
-                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id']);
+                    component($row['item_name'], $row['item_price'], $row['item_image'], $row['item_id'], $row['item_description']);
                 }
             ?>
         </div>

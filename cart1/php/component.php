@@ -36,7 +36,15 @@ function component($itemname, $itemprice, $itemimg, $itemid, $itemdescptn){
     echo $element;
 }
 
-function cartElement($itemimg, $itemname, $itemprice, $itemid){
+function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
+   
+    if (isset($_SESSION['cart'])){
+    
+    $cart_price = $itemprice * $qtt ;
+}else{
+    $cart_price=$itemprice;
+}
+    
     $element = "
     
     <form action=\"cart.php?action=remove&id=$itemid\" method=\"post\" class=\"cart-items\">
@@ -48,17 +56,20 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid){
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$itemname</h5>
                                 <small class=\"text-secondary\">Seller: chikuu98</small>
-                                <h5 class=\"pt-2\">Rs.$itemprice.00</h5>
+                                <h5 class=\"pt-2\">Rs.$cart_price.00</h5>
                                 <button type=\"submit\" class=\"btn btn-success my-1 shadow\">More Details</button>
                                 <button type=\"submit\" class=\"btn btn-danger mx-2 my-1 shadow\" name=\"remove\">Remove</button>
                             </div>
-                            <div class=\"col-md-3 py-5 shadow\">
-                                <div>
-                                    <button type=\"button\" class=\"btn bg-light border rounded-circle shadow\"><i class=\"fas fa-minus\"></i></button>
-                                    <input type=\"text\" value=\"1\" class=\"form-control w-25 d-inline shadow\">
-                                    <button type=\"button\" class=\"btn bg-light border rounded-circle shadow\"><i class=\"fas fa-plus\"></i></button>
+                            
+                            <div class=\"col-md-3 py-3 shadow\">
+                                <small class=\"text-secondary text-center\">Available quantity = $qtt</small>
+                                <div class=\"py-3 ml-4 mt-2\">
+                                    
+                                    <input type=\"number\" min=\"1\" max=$qtt name=\"qtt\" value=1 class=\" text-center form-control w-75 d-inline shadow\">
+                                   
                                 </div>
                             </div>
+                                                     
                         </div>
                     </div>
                 </form>
@@ -66,3 +77,10 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid){
     ";
     echo  $element;
 }
+
+// <form > <input type='text' name='qty' id='qty' />
+// <input type='button' name='add' onclick='javascript:document.getElementById("qty").value++;' value='+'/> 
+// <input type='button' name='subtract' onclick='javascript: document.getElementById("qty").value--;' value='-'/> 
+// </form>
+
+// <input type="number" name="quantity" min="1" max="99">

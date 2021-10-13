@@ -56,12 +56,12 @@ if (isset($_POST['remove'])){
                 $total = 0;
                     if (isset($_SESSION['cart'])){
                         $item_id = array_column($_SESSION['cart'], 'itemid');
-
+                        
                         $result = $db->getData();
                         while ($row = mysqli_fetch_assoc($result)){
                             foreach ($item_id as $id){
                                 if ($row['item_id'] == $id){
-                                    cartElement($row['item_image'], $row['item_name'],$row['item_price'], $row['item_id']);
+                                    cartElement($row['item_image'], $row['item_name'],$row['item_price'], $row['item_id'], $row['available_quantity']);
                                     $total = $total + (int)$row['item_price'];
                                 }
                             }

@@ -37,16 +37,20 @@ function component($itemname, $itemprice, $itemimg, $itemid, $itemdescptn){
 }
 
 function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
-   
-    if (isset($_SESSION['cart'])){
-    
-    $cart_price = $itemprice * $qtt ;
-}else{
-    $cart_price=$itemprice;
-}
-    
     $element = "
     
+    <script>
+    function calc() 
+    {
+        const price = document.getElementById(\"i_price\").innerHTML;
+        const noTickets = document.getElementById(\"num\").value;
+        const total = parseFloat(price) * noTickets
+        if (!isNaN(total))
+        document.getElementById(\"total\").innerHTML = total;
+        return true;
+
+    }
+    </script>
     <form action=\"cart.php?action=remove&id=$itemid\" method=\"post\" class=\"cart-items\">
                     <div class=\"shadow border rounded\">
                         <div class=\"row bg-white my-2 mx-2\">
@@ -56,17 +60,19 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$itemname</h5>
                                 <small class=\"text-secondary\">Seller: chikuu98</small>
-                                <h5 class=\"pt-2\">Rs.$cart_price.00</h5>
+                                <h5>Rs.<span id=\"i_price\">$itemprice</span>.00</h5>
                                 <button type=\"submit\" class=\"btn btn-success my-1 shadow\">More Details</button>
                                 <button type=\"submit\" class=\"btn btn-danger mx-2 my-1 shadow\" name=\"remove\">Remove</button>
                             </div>
                             
-                            <div class=\"col-md-3 py-3 shadow\">
+                            <div class=\"col-md-3 mt-1 shadow\">
                                 <small class=\"text-secondary text-center\">Available quantity = $qtt</small>
-                                <div class=\"py-3 ml-4 mt-2\">
+                                <div >
                                     
-                                    <input type=\"number\" min=\"1\" max=$qtt name=\"qtt\" value=1 class=\" text-center form-control w-75 d-inline shadow\">
-                                   
+                                <p class=\"text-secondary text-center\"><small>quantity :
+                                </small><input type=\"number\" id=\"num\" min=\"1\" max=$qtt name=\"qtt\"  oninput=\"calc()\"  class=\" text-center form-control w-75 d-inline shadow\"></p>
+                                <h ><small class=\"ml-3 text-success\"><b>Subtotal :Rs.<span id=\"total\">0</span>.00</b></small></h6>
+                                          
                                 </div>
                             </div>
                                                      
@@ -77,10 +83,3 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
     ";
     echo  $element;
 }
-
-// <form > <input type='text' name='qty' id='qty' />
-// <input type='button' name='add' onclick='javascript:document.getElementById("qty").value++;' value='+'/> 
-// <input type='button' name='subtract' onclick='javascript: document.getElementById("qty").value--;' value='-'/> 
-// </form>
-
-// <input type="number" name="quantity" min="1" max="99">

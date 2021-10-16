@@ -37,6 +37,7 @@ if (isset($_POST['remove'])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body class="bg-light">
 
@@ -53,7 +54,7 @@ if (isset($_POST['remove'])){
 
                 <?php
 
-                $total = 0;
+                
                     if (isset($_SESSION['cart'])){
                         $item_id = array_column($_SESSION['cart'], 'itemid');
                         
@@ -62,7 +63,7 @@ if (isset($_POST['remove'])){
                             foreach ($item_id as $id){
                                 if ($row['item_id'] == $id){
                                     cartElement($row['item_image'], $row['item_name'],$row['item_price'], $row['item_id'], $row['available_quantity']);
-                                    $total = $total + (int)$row['item_price'];
+                                    
                                 }
                             }
                         }
@@ -76,10 +77,10 @@ if (isset($_POST['remove'])){
         </div>
         <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25 shadow">
 
-            <div class="pt-4 px-4 shadow">
-                <h6>PRICE DETAILS</h6>
+            <div class="pt-4 px-4 my-4 shadow">
+                <h6 class="text-success">PRICE DETAILS</h6>
                 <hr>
-                <div class="row price-details">
+                <div class="row price-details py-4 my-4">
                     <div class="col-md-6">
                         <?php
                             if (isset($_SESSION['cart'])){
@@ -91,15 +92,15 @@ if (isset($_POST['remove'])){
                         ?>
                         <h6>Delivery Charges</h6>
                         <hr>
-                        <h6>Amount Payable</h6>
+                        <h6 class="text-danger">Amount Payable</h6>
+                        <hr>
                     </div>
                     <div class="col-md-6">
-                        <h6>Rs.<?php echo $total; ?>.00</h6>
+                        <h6>Rs.<span id="gtotal"></span>.00</h6>
                         <h6 class="text-success">FREE</h6>
                         <hr>
-                        <h6>Rs.<?php
-                            echo $total;
-                            ?>.00</h6>
+                        <h6  class="text-danger"><b>Rs.<span id="gtotal2"></span>.00/=</b></h6>
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -108,6 +109,27 @@ if (isset($_POST['remove'])){
     </div>
 </div>
 
+<script>
+    var gt = 0 ;
+    var iprice = document.getElementsByClassName("iprice");
+    var iquantity = document.getElementsByClassName("iquantity");
+    var itotal = document.getElementsByClassName("itotal");
+    var gtotal = document.getElementById('gtotal');
+
+    function subTotal()
+    {
+        gt=0;
+        for(i=0;i<iprice.length;i++)
+        {
+            itotal[i].innerText = (iprice[i].value)*(iquantity[i].value);
+            gt = gt + (iprice[i].value)*(iquantity[i].value);
+        }
+        gtotal.innerText=gt;
+        gtotal2.innerText=gt;
+    }
+    subTotal();
+
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

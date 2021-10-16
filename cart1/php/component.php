@@ -38,19 +38,6 @@ function component($itemname, $itemprice, $itemimg, $itemid, $itemdescptn){
 
 function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
     $element = "
-    
-    <script>
-    function calc() 
-    {
-        const price = document.getElementById(\"i_price\").innerHTML;
-        const noTickets = document.getElementById(\"num\").value;
-        const total = parseFloat(price) * noTickets
-        if (!isNaN(total))
-        document.getElementById(\"total\").innerHTML = total;
-        return true;
-
-    }
-    </script>
     <form action=\"cart.php?action=remove&id=$itemid\" method=\"post\" class=\"cart-items\">
                     <div class=\"shadow border rounded\">
                         <div class=\"row bg-white my-2 mx-2\">
@@ -60,7 +47,7 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$itemname</h5>
                                 <small class=\"text-secondary\">Seller: chikuu98</small>
-                                <h5>Rs.<span id=\"i_price\">$itemprice</span>.00</h5>
+                                <h5>Rs.<span id=\"i_price\">$itemprice</span>.00<input type=\"hidden\" class=\"iprice\" value=\"$itemprice\"></h5>
                                 <button type=\"submit\" class=\"btn btn-success my-1 shadow\">More Details</button>
                                 <button type=\"submit\" class=\"btn btn-danger mx-2 my-1 shadow\" name=\"remove\">Remove</button>
                             </div>
@@ -70,8 +57,8 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
                                 <div >
                                     
                                 <p class=\"text-secondary text-center\"><small>quantity :
-                                </small><input type=\"number\" id=\"num\" min=\"1\" max=$qtt name=\"qtt\"  oninput=\"calc()\"  class=\" text-center form-control w-75 d-inline shadow\"></p>
-                                <h ><small class=\"ml-3 text-success\"><b>Subtotal :Rs.<span id=\"total\">0</span>.00</b></small></h6>
+                                </small><input type=\"number\" value=1 min=\"1\" max=$qtt name=\"qtt\"  oninput=\"subTotal()\"  class=\"iquantity text-center form-control w-75 d-inline shadow\"></p>
+                                <h ><small class=\"ml-3 text-success\"><b>Subtotal :Rs.<span class=\"itotal\" id=\"total\"></span>.00</b></small></h6>
                                           
                                 </div>
                             </div>

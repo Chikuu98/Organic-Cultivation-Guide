@@ -26,6 +26,7 @@ if (isset($_POST['add'])){
             );
 
             $_SESSION['cart'][$count] = $item_array;
+            
         }
 
     }else{

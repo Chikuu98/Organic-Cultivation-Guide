@@ -47,7 +47,7 @@ class ConnectDb
         }
     }
 
-    // get product from the database
+    // get items from the database
     public function getData(){
         $sql = "SELECT * FROM $this->tablename";
 

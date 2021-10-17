@@ -46,33 +46,13 @@
 <br><br><br>
 <!---------------------------------home-cover------------------------------------------->
 <div class="rowh bg-success">
-                <div class="colh">
-                    <h1 class="h1title">EcoChiKo</h1>
+                <div class="colh ">
+                    <h1 class="h1title">EcoJEE</h1>
                     <p class="p-cover">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Autem molestiae<br>quibusdam veniam dignissimos dolor sed quae debitis porro soluta.<br> 
                         Ad quos amet nostrum aspernatur fugiat, facere in voluptas soluta.
                     </p>
                     <a href="signupdesign.php"><button class="btn-home" type="button">Sign Up</button></a>
-                </div>
-                <div class="colh colc">
-                    <div class="card cd1">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="card cd2">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="colh colc">
-                    <div class="card cd3">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="card cd4">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
                 </div>
             </div>
 

@@ -1,7 +1,7 @@
 <?php
 
 function component($itemname, $itemprice, $itemimg, $itemid, $itemdescptn){
-    $price=$itemprice+100;
+    $price=$itemprice+($itemprice/5);
     $element = "
     
     <div class=\"col-md-3 col-sm-6 my-3 my-md-0\">

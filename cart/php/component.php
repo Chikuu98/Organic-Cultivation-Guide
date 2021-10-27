@@ -39,8 +39,8 @@ function component($itemname, $itemprice, $itemimg, $itemid, $itemdescptn){
 function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
     $element = "
     <form action=\"cart.php?action=remove&id=$itemid\" method=\"post\" class=\"cart-items\">
-                    <div class=\"shadow border rounded\">
-                        <div class=\"row bg-white my-2 mx-2\">
+                    <div class=\" border rounded shadow\">
+                        <div class=\"row bg-white my-2 mx-2 \">
                             <div class=\"col-md-3 pl-0\">
                                 <img src=$itemimg alt=\"Image1\" class=\"img-fluid\">
                             </div>
@@ -52,7 +52,7 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
                                 <button type=\"submit\" class=\"btn btn-danger mx-2 my-1 shadow\" name=\"remove\">Remove</button>
                             </div>
                             
-                            <div class=\"col-md-3 mt-1 shadow\">
+                            <div class=\"col-md-3 mt-1 \">
                                 <small class=\"text-secondary text-center\">Available quantity = $qtt</small>
                                 <div >
                                     

@@ -89,7 +89,7 @@ if (isset($_POST['remove_all'])){
         </div>
 
                   <!-- ----price details---- -->
-        <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25 shadow">
+        <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25 ">
             <div class="pt-4 px-4 my-4 shadow ">
                 <h6 class="text-success text-center"><b>PRICE DETAILS</b></h6>
                 <hr>

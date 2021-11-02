@@ -46,7 +46,7 @@
 <br><br><br>
 <!---------------------------------home-cover------------------------------------------->
 <div class="rowh bg-success">
-                <div class="colh ">
+                <div class="colh md-5">
                     <h1 class="h1title">EcoJEE</h1>
                     <p class="p-cover">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Autem molestiae<br>quibusdam veniam dignissimos dolor sed quae debitis porro soluta.<br> 
@@ -54,10 +54,34 @@
                     </p>
                     <a href="signupdesign.php"><button class="btn-home" type="button">Sign Up</button></a>
                 </div>
-            </div>
+
+
+                <div >
+                    <div class="card cd1 mx-5">
+                        <h5>Farming</h5><br><br><br><br><br>
+                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card cd2 mx-5">
+                        <h5>Farming</h5><br><br><br><br><br>
+                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="colh">
+                    <div class="card cd3 mx-5">
+                        <h5>Farming</h5><br><br><br><br><br>
+                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card cd4 mx-5">
+                        <h5>Farming</h5><br><br><br><br><br>
+                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
+            </div>    
+
+
+</div>
 
     <!-----------x------------home-cover-------------------------x--------------------------->
-    </div>
+   
     <br><br><br>
 
      <!-----------------------what we do---------------------------------------------------->

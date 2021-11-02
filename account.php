@@ -1,14 +1,17 @@
 <?php
 
     require_once('header.php');
+
     if(isset($_GET['Well']))
     {
 
         if($_SESSION['U_ID'])
         {
+            $name=($_SESSION['Name']);
             ?>
+            <h1 class="text-center text-secondary mt-5"><b>Hello <?php echo $name?>..!</b></h1>
             <br><br><br><br>
-            <div class="container mt-5">
+            <div class="container">
 
             <div class="row">
 
@@ -22,7 +25,7 @@
                                 <div class="col">
                                     <h3 class="display-3">01</h3>
                                 </div>
-                                <h5 class="my-3">EcoJEE Shop</h5>
+                                <h4 class="my-3">EcoJEE Shop</h4>
                             </div>
 
                         </div>
@@ -44,13 +47,13 @@
                                 <div class="col">
                                     <h3 class="display-3">02</h3>
                                 </div>
-                                <h5 class="my-3">Blog</h5>
+                                <h4 class="my-3">Blog</h4>
                             </div>
 
                         </div>
                         <div class="card-footer">
                             <h5>
-                                <a href="#" class="text-primary">View blog <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                <a href="blog/blog.php" class="text-primary">View blog <i class="fa fa-arrow-alt-circle-right"></i></a>
                             </h5>
                         </div>
                     </div>
@@ -66,7 +69,7 @@
                                 <div class="col">
                                     <h3 class="display-3">03</h3>
                                 </div>
-                                <h5 class="my-3">News & Instructions</h5>
+                                <h4 class="my-3">News & Instructions</h4>
                             </div>
 
                         </div>
@@ -88,7 +91,7 @@
                                 <div class="col">
                                     <h3 class="display-3">04</h3>
                                 </div>
-                                <h5 class="my-3">My Account</h5>
+                                <h4 class="my-3">My Account</h4>
                             </div>
 
                         </div>

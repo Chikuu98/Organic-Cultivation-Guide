@@ -33,7 +33,7 @@
                         ?>  
                     </h5>
                 </a>
-                <a href="cart.php" class="nav-item nav-link active">
+                <a href="http://localhost/organic/account.php?Well" class="nav-item nav-link active">
                 <h5 class="cart"><i class="fas fa-home"></i></h5>
                 </a>    
             </div>

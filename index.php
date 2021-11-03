@@ -48,9 +48,7 @@
 <div class="rowh bg-success">
                 <div class="colh md-5">
                     <h1 class="h1title">EcoJEE</h1>
-                    <p class="p-cover">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Autem molestiae<br>quibusdam veniam dignissimos dolor sed quae debitis porro soluta.<br> 
-                        Ad quos amet nostrum aspernatur fugiat, facere in voluptas soluta.
+                    <p class="text-light">To promote agriculture and food systems that build healthy land, people, communities and quality of life, for present and future generations.
                     </p>
                     <a href="signupdesign.php"><button class="btn-home" type="button">Sign Up</button></a>
                 </div>

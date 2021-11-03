@@ -60,6 +60,7 @@ if (isset($_POST['add'])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="cindex.css">
+    <link rel="stylesheet" href="cartFooter.css">
 </head>
 <body>
 
@@ -75,7 +76,59 @@ if (isset($_POST['add'])){
         </div>
 </div>
 
+<!-- --------------footer--------------- -->
+<section class="foot">
+        <footer>
+            <div class="move-up">
+                <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+            </div>
+            <div class="rowf">
+                <div class="colf">
+                    <h3 class="logof"><i class="fa fa-pagelines" aria-hidden="true"></i> Cultivation Guide</h3>
+                    <p class="pf">To promote agriculture and food systems that build healthy land, people, communities and quality of life, for present and future generations.</p>
+                </div>
+                <div class="colf">
+                    <h3 class="h3f">Address <div class="underlinef"><span class="spanf"></span></div></h3>
+                    <div class="addressf">
+                        <p class="pf">Yatiyana Road<br>
+                        Aparekka,Matara<br>
+                        Sothern Province, Sri Lanka</p>
+                    </div>
+                    <p class="email-idf">chiranjonline@gmail.com</p>
+                    <p>+94- 779980990</p>
+                </div>
+                <div class="colf">
+                    <h3 class="h3f">Links <div class="underlinef"><span class="spanf"></span></div></h3>
+                    <ul class="ulf">
+                        <li class="lif"><a class="af" href="">Home</a></li>
+                        <li class="lif"><a class="af" href="">Buy & Sell</a></li>
+                        <li class="lif"><a class="af" href="">Blog</a></li>
+                        <li class="lif"><a class="af" href="">News & Inst.</a></li>
+                        <li class="lif"><a class="af" href="">Account</a></li>
+                    </ul>
+                </div>
+                <div class="colf">
+                    <h3 class="h3f">Newsletter <div class="underlinef"><span class="spanf"></span></div></h3>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <form class="frmf">             
+                        <input type="email" placeholder="Enter your  email" required>
+                        <Button type="submit"><i class="fas fa-arrow-right" aria-hidden="true"></i></Button>  
+                    </form>
+                    <div class="social-iconsf">
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-whatsapp-square"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="hrf">
+            <p class="copyrightf">Chiran Jeewantha Vidanagamage <i class="far fa-copyright"></i> 2021 - All Rights Reserved</p>
+        </footer>
+    </section>
 
+    <!-- ----------------footer close------------------- -->
 
 
 

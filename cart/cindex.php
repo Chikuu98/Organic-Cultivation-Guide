@@ -79,16 +79,16 @@ if (isset($_POST['add'])){
 <!-- --------------footer--------------- -->
 <section class="foot">
         <footer>
-            <div class="move-up">
-                <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        <div class="move-up">
+                <span><a href="#"><i style="color: white;" class="fas fa-arrow-circle-up fa-2x"></i></a></span>
             </div>
             <div class="rowf">
                 <div class="colf">
-                    <h3 class="logof"><i class="fa fa-pagelines" aria-hidden="true"></i> Cultivation Guide</h3>
+                    <h3 class="logof"><i class="fab fa-pagelines" aria-hidden="true"></i><b> Cultivation Guide</b></h3>
                     <p class="pf">To promote agriculture and food systems that build healthy land, people, communities and quality of life, for present and future generations.</p>
                 </div>
                 <div class="colf">
-                    <h3 class="h3f">Address <div class="underlinef"><span class="spanf"></span></div></h3>
+                    <h3 class="h3f"><b>Address </b><div class="underlinef"><span class="spanf"></span></div></h3>
                     <div class="addressf">
                         <p class="pf">Yatiyana Road<br>
                         Aparekka,Matara<br>
@@ -98,7 +98,7 @@ if (isset($_POST['add'])){
                     <p>+94- 779980990</p>
                 </div>
                 <div class="colf">
-                    <h3 class="h3f">Links <div class="underlinef"><span class="spanf"></span></div></h3>
+                    <h3 class="h3f"><b>Links </b><div class="underlinef"><span class="spanf"></span></div></h3>
                     <ul class="ulf">
                         <li class="lif"><a class="af" href="">Home</a></li>
                         <li class="lif"><a class="af" href="">Buy & Sell</a></li>
@@ -108,7 +108,7 @@ if (isset($_POST['add'])){
                     </ul>
                 </div>
                 <div class="colf">
-                    <h3 class="h3f">Newsletter <div class="underlinef"><span class="spanf"></span></div></h3>
+                    <h3 class="h3f"><b>Newsletter </b><div class="underlinef"><span class="spanf"></span></div></h3>
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     <form class="frmf">             
                         <input type="email" placeholder="Enter your  email" required>

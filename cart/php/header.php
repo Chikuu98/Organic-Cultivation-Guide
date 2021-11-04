@@ -34,10 +34,15 @@
                     </h5>
                 </a>
                 <a href="http://localhost/organic/account.php?Well" class="nav-item nav-link active">
-                <h5 class="cart"><i class="fas fa-home"></i></h5>
+                <h5 class="cart"><i class="fas fa-home mr-5"></i></h5>
                 </a>    
             </div>
         </div>
 
     </nav>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+    </style>
 </header>

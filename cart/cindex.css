@@ -28,3 +28,7 @@ img {
 .price-details h6 {
     padding: 3% 2%;
 }
+
+html {
+    scroll-behavior: smooth;
+}

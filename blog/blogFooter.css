@@ -180,3 +180,7 @@ footer {
 
 
 /* -------x------- footer ---------x----- */
+
+html {
+    scroll-behavior: smooth;
+}

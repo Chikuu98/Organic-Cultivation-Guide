@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultivation Guide</title>
 </head>
-<body style="background:#68c3a3">
-<nav class="navbar navbar-expand-lg navbar-dark shadow bg-success">
+<body style="background:linear-gradient(to right, #068637,#87f894,#068637)">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
   <div class="container">
     <a class="navbar-brand" href="index.php"><h3><i class="fa fa-pagelines" aria-hidden="true"></i> Cultivation Guide</h3></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

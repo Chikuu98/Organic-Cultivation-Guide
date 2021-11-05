@@ -20,7 +20,7 @@
 </head>
 <body class="bg-light">
 <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #013243, #1989d3,#013243)">
         <a href="blog.php" class="navbar-brand">
             <h3 class="px-5 ml-5">
                 <i class="fab fa-blogger-b"></i> Eco<small>JEE</small> Blog

@@ -1,5 +1,5 @@
 <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
         <a href="cindex.php" class="navbar-brand">
             <h3 class="px-5">
                 <i class="fas fa-shopping-basket"></i> Eco<small>JEE</small> Shop
@@ -26,9 +26,9 @@
 
                         if (isset($_SESSION['cart'])){
                             $count = count($_SESSION['cart']);
-                            echo "<span id=\"cart_count\" class=\"text-light bg-success\">$count <small>items in </small><i class=\"fas fa-shopping-cart\"></i></span>";
+                            echo "<span id=\"cart_count\" class=\"text-light\">$count <small>items in </small><i class=\"fas fa-shopping-cart\"></i></span>";
                         }else{
-                            echo "<span id=\"cart_count\" class=\"text-light bg-success\">0 <small>items in </small><i class=\"fas fa-shopping-cart\"></i></span>";
+                            echo "<span id=\"cart_count\" class=\"text-light\">0 <small>items in </small><i class=\"fas fa-shopping-cart\"></i></span>";
                         }   
                         ?>  
                     </h5>

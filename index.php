@@ -15,7 +15,7 @@
     <title>Cultivation Guide</title>
 </head>
 <body style="background:#198754">
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
   <div class="container">
     <a class="navbar-brand" href="index.php"><h3><i class="fa fa-pagelines" aria-hidden="true"></i> Cultivation Guide</h3></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -147,8 +147,8 @@
 
      <section class="foot">
         <footer>
-            <div class="move-up">
-                <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        <div class="move-up">
+                <span><a href="#"><i style="color: white;" class="fas fa-arrow-circle-up fa-2x"></i></a></span>
             </div>
             <div class="rowf">
                 <div class="colf">

@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultivation Guide</title>
 </head>
-<body style="background:#68c3a3">
-<nav class="navbar navbar-expand-lg navbar-dark shadow bg-success">
+<body style="background:linear-gradient(to right, #033115, #1af06c, #a2f7ac)">
+<nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
   <div class="container">
     <a class="navbar-brand" href="#"><h3><i class="fa fa-pagelines" aria-hidden="true"></i> Cultivation Guide</h3></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,104 +53,115 @@
             ?>
 
             <!-- -----------body-content------------- -->
-            <h1 class="text-center text-light mt-5"><b>Hello <?php echo $name?>..!</b></h1>
-            <br><br><br><br>
-            <div class="container">
 
-            <div class="row">
-
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-success text-white">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <i class="fas fa-shopping-cart fa-4x"></i>
-                                </div>
-                                <div class="col">
-                                    <h3 class="display-3">01</h3>
-                                </div>
-                                <h4 class="my-3">EcoJEE Shop</h4>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <h5>
-                                <a href="cart/cindex.php" class="text-success">Go to Shop <i class="fa fa-arrow-alt-circle-right"></i></a>
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-primary text-white">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <i class="fab fa-blogger-b fa-4x"></i>
-                                </div>
-                                <div class="col">
-                                    <h3 class="display-3">02</h3>
-                                </div>
-                                <h4 class="my-3">Blog</h4>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <h5>
-                                <a href="blog/blog.php" class="text-primary">View blog <i class="fa fa-arrow-alt-circle-right"></i></a>
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-info text-white">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <i class="fa fa-newspaper fa-4x"></i>
-                                </div>
-                                <div class="col">
-                                    <h3 class="display-3">03</h3>
-                                </div>
-                                <h4 class="my-3">News & Instructions</h4>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <h5>
-                                <a href="#" class="text-info">View News <i class="fa fa-arrow-alt-circle-right"></i></a>
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-danger text-white">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <i class="fas fa-address-book fa-4x"></i>
-                                </div>
-                                <div class="col">
-                                    <h3 class="display-3">04</h3>
-                                </div>
-                                <h4 class="my-3">My Account</h4>
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <h5>
-                                <a href="#" class="text-danger">Go to Account <i class="fa fa-arrow-alt-circle-right"></i></a>
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="text-light display-1 mt-5 ml-5 pl-5"><img style="height: 250px;" src="assets/eco.png"><br><b>Hello <?php echo $name?>..!</b></h1>
+                
+                
             </div>
 
+            <div class="col-md-6">
+                
+                <div class="row mx-5 my-5">
+                    <div class="row my-3">
+                        <div class="col-md-6">
+                            <div class="card text-center shadow">
+                                <div class="card-header text-white" style="background:linear-gradient(to right, #033115, #0e9743, #19f533)">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <i class="fas fa-shopping-cart fa-2x"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h3 class="display-3">01</h3>
+                                        </div>
+                                        <h4 class="my-2">EcoJEE Shop</h4>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <h6>
+                                        <a href="cart/cindex.php" class="text-success">Go to Shop <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card text-center shadow">
+                                <div class="card-header text-white" style="background:linear-gradient(to right, #000e05, #170e97, #5b19f5)">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <i class="fab fa-blogger-b fa-2x"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h3 class="display-3">02</h3>
+                                        </div>
+                                        <h4 class="my-2">EcoJEE Blog</h4>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <h6>
+                                        <a href="blog/blog.php" class="text-primary">View blog <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card text-center shadow">
+                                <div class="card-header text-white" style="background:linear-gradient(to right, #000e05, #170e97, #5b19f5)">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <i class="fa fa-newspaper fa-2x"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h3 class="display-3">03</h3>
+                                        </div>
+                                        <h4 class="my-2">News</h4>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <h6>
+                                        <a href="#" class="text-primary">View News <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card text-center shadow">
+                                <div class="card-header text-white" style="background:linear-gradient(to right, #033115, #0e9743, #19f533)">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <i class="fas fa-address-book fa-2x"></i>
+                                        </div>
+                                        <div class="col">
+                                            <h3 class="display-3">04</h3>
+                                        </div>
+                                        <h4 class="my-2">My Account</h4>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer">
+                                    <h6>
+                                        <a href="#" class="text-success">Go to Account <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
             <?php
         }
         else

@@ -60,9 +60,9 @@
     }
     
     .btn-home:hover {
-        background: linear-gradient(to right, #56ab2f, #a8e063);
+        background: linear-gradient(to right, #033115, #19f533, #033115);
         transition: 0.5s;
-        color: black;
+        color: rgb(255, 255, 255);
     }
     
     .card {
@@ -136,9 +136,9 @@
             align-content: center;
         }
         .btn-home:hover {
-            background: linear-gradient(to right, #56ab2f, #a8e063);
+            background: linear-gradient(to right, #033115, #19f533, #033115);
             transition: 0.5s;
-            color: black;
+            color: rgb(255, 255, 255);
         }
         .rowh {
             flex-direction: column;
@@ -152,6 +152,11 @@
         .colh {
             padding-left: 0px;
             margin-right: 35px;
+        }
+        .btn-home:hover {
+            background: linear-gradient(to right, #033115, #19f533, #033115);
+            transition: 0.5s;
+            color: rgb(255, 255, 255);
         }
     }
     /* -------x------- home-cover ---------x----- */
@@ -174,17 +179,32 @@
         .container {
             width: 750px;
         }
+        .btn-home:hover {
+            background: linear-gradient(to right, #033115, #19f533, #033115);
+            transition: 0.5s;
+            color: rgb(255, 255, 255);
+        }
     }
     
     @media (min-width: 992px) {
         .container {
             width: 970px;
         }
+        .btn-home:hover {
+            background: linear-gradient(to right, #033115, #19f533, #033115);
+            transition: 0.5s;
+            color: rgb(255, 255, 255);
+        }
     }
     
     @media (min-width: 1200px) {
         .container {
             width: 1170px;
+        }
+        .btn-home:hover {
+            background: linear-gradient(to right, #033115, #19f533, #033115);
+            transition: 0.5s;
+            color: rgb(255, 255, 255);
         }
     }
     
@@ -275,6 +295,11 @@
         }
         .maina {
             margin-bottom: 100px;
+        }
+        .btn-home:hover {
+            background: linear-gradient(to right, #033115, #19f533, #033115);
+            transition: 0.5s;
+            color: rgb(255, 255, 255);
         }
     }
     /* --------------- footer --------------- */

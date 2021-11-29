@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2021 at 04:27 PM
+-- Generation Time: Nov 29, 2021 at 04:28 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.19
 
@@ -62,63 +62,6 @@ INSERT INTO `blog` (`blog_id`, `blog_date`, `blog_title`, `blog_short_title`, `b
 (17, '2021-11-04', 'Growth of Organic Agriculture', 'Growth of Organic Agriculture', '<p><strong><em><span style=\\\"line-height:1.6em\\\">While everybody makes a mistake now and then, there are better ways to deal with slip-ups than shouting.</span></em></strong></p>\r\n\r\n<h3><strong>Management</strong></h3>\r\n\r\n<p>Confronting employees about unintentional errors or a task done wrong is never a fun or easy task. That&rsquo;s why many managers tend to take a reactive approach to handling employee mistakes. They have been taught how to give feedback and deal with conflict through corrective actions such as verbal or written warnings, and sometimes, termination. As a result, they often perceive handling employee mistakes as a confrontational situation and an inevitable part of being a manager. But this shouldn&rsquo;t always be the case as most mistakes can be avoided if the right precautions are taken in advance. Akthaboot offers several tips to help you limit employee errors in your company.</p>\r\n\r\n<h3><strong>Set Clear Expectations</strong></h3>\r\n\r\n<p>Setting expectations is one of the basic fundamentals of leadership; yet, many managers fail to make clear requests that have no room for interpretation. The first step towards setting clear expectations is planning. The more time you dedicate to planning, the more effective your team will be when they start executing. The second component of setting clear expectations requires great communication skills. Your employees want to be on the same page as you, they want to make smart decisions, but they cannot read minds. Rephrase your requests in a way that can be heard, often several times, before they become internalized by others.</p>\r\n\r\n<h3><strong>Document Your Expectations</strong></h3>\r\n\r\n<p>Making clear requests is a great start when it comes to limiting employee mistakes, but over time people tend to forget what was agreed upon and you can still fall into the &ldquo;I said, he said&rdquo; trap. If you feel that your request can be misinterpreted from what you intended, make sure that you document it in writing or using electronic systems. There are many systems that allow you to assign tasks to employees while allowing them to ask questions, give updates, and request more information. It also gives you a point of reference if there is a problem later on.</p>\r\n\r\n<h3><strong>Address Any Problems with Facts</strong></h3>\r\n\r\n<p>Mistakes happen to the best employees and systems. Whether intentional or due to negligence. When the time to address mistakes with your team comes, you need to focus the team&rsquo;s&nbsp; attention on facts instead of feelings or personal issues. This doesn&rsquo;t mean that you need to eliminate any emotional charge out of the conversation; you need to tackle the mistake in a factual approach by referring back to the initial request and the documentation. By doing so, you will be able to pinpoint team members who didn&rsquo;t follow the brief from those who simply misunderstood the request.</p>\r\n\r\n<h3><strong>Document the Mistakes</strong></h3>\r\n\r\n<p>Smart companies know the difference between a lesson learned and finding a permanent solution for it. Learning a lesson from mistakes happens only when we take responsibility for the mistake, try different approaches to achieve different results, and then integrate best practices into the company&rsquo;s culture by documenting all cases. Create some type of knowledge management system, which could be as a simple as a spreadsheet. This sheet will allow you to document the mistakes, the causes and the solutions, and then you can create some type of standard operating procedures. Once you share it with your employees, make sure that you periodically refer to it to ensure that the lesson has truly been learned and similar mistakes are less likely to be repeated.</p>\r\n\r\n<p><em>By akthaboot - the career network</em></p>\r\n', '2021-11-04', 1, NULL, NULL, NULL, NULL, 0, '../assets/blogImg/blog12.jpg'),
 (18, '2021-11-04', 'Why Farm Organically?', 'Why Farm Organically?', '<b><p><em>Organic agriculture is a unique production management system</em></p></b>\r\n<p>“Organic Agriculture is a production system that sustains the health of soils, ecosystems and people. It relies on ecological processes, biodiversity and cycles adapted to local conditions, rather than the use of inputs with adverse effects. Organic Agriculture combines tradition, innovation and science to benefit the shared environment and promote fair relationships and a good quality of life for all involved.”\r\n    \r\n    FAO suggested that “Organic agriculture is a unique production management system which promotes and enhances agro-ecosystem health, including biodiversity, biological cycles and soil biological activity, and this is accomplished by using on-farm agronomic, biological and mechanical methods in exclusion of all synthetic off-farm inputs”.&nbsp;<br />\r\n&nbsp;<br />\r\n<br />\r\n<strong>Need of organic farming</strong><br>With the increase in population our compulsion would be not only to stabilize agricultural production but to increase it further in sustainable manner. The scientists have realized that the ‘Green Revolution’ with high input use has reached a plateau and is now sustained with diminishing return of falling dividends. Thus, a natural balance needs to be maintained at all cost for existence of life and property. The obvious choice for that would be more relevant in the present era, when these agrochemicals which are produced from fossil fuel and are not renewable and are diminishing in availability. It may also cost heavily on our foreign exchange in future.\r\n&nbsp;<br />\r\n<br />\r\n\r\n<p><em>written by: P. Samararathne</em></p>\r\n', '2021-11-04', 1, NULL, NULL, NULL, NULL, 0, '../assets/blogImg/blog13.jpg');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `itemtb`
---
-
-CREATE TABLE `itemtb` (
-  `item_id` int(10) NOT NULL,
-  `item_name` varchar(50) NOT NULL,
-  `available_quantity` int(10) NOT NULL,
-  `item_price` int(10) NOT NULL,
-  `item_description` varchar(500) NOT NULL,
-  `item_image` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `itemtb`
---
-
-INSERT INTO `itemtb` (`item_id`, `item_name`, `available_quantity`, `item_price`, `item_description`, `item_image`) VALUES
-(1, 'Dry Beans (100g)', 200, 60, 'demo description to this item', './upload/seeds1.jpg'),
-(2, 'Green Chili (plant)', 20, 45, 'demo description to this item', './upload/seeds2.jpg'),
-(3, 'Microgreens (plant)', 50, 85, 'demo description to this item', './upload/seeds3.jpg'),
-(4, 'Capsicum (plant)', 100, 50, 'demo description to this item', './upload/seeds4.jpg'),
-(5, 'Asian Greens (plant)', 300, 65, 'demo description to this item', './upload/seeds5.jpg'),
-(6, 'Bush Beans (5 pees)', 60, 120, 'demo description to this item', './upload/seeds6.jpg'),
-(7, 'Celeriac (plant)', 40, 70, 'demo description to this item', './upload/seeds7.jpg'),
-(8, 'Kidney Bean (100g)', 50, 25, 'demo description to this item', './upload/seeds8.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `userinfo`
---
-
-CREATE TABLE `userinfo` (
-  `ID` int(11) NOT NULL,
-  `Name` varchar(200) NOT NULL,
-  `Email` varchar(200) NOT NULL,
-  `Address` varchar(200) NOT NULL,
-  `Mobile` int(200) NOT NULL,
-  `NIC` int(200) NOT NULL,
-  `Password` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `userinfo`
---
-
-INSERT INTO `userinfo` (`ID`, `Name`, `Email`, `Address`, `Mobile`, `NIC`, `Password`) VALUES
-(3, 'Venura', 'venura@gmail.com', 'Aparekka, Matara.', 729502906, 2147483647, '$2y$10$ZPaPqDWpCuEU13Xv6ITR8.cDXq.ooi1Kv/m0.tLGB94edzpcg/wXO'),
-(4, 'Vihanga', 'vihanga@gmail.com', 'kiribathgoda.', 703533330, 948984643, '$2y$10$Z.JoYOyw4wiRsQQUSrogAOihrGxEPMiEsJvs/t1aoQby3zQSwd.XW'),
-(5, 'Amish', 'amish@gmail.com', 'Kekanadura, Matara.', 714955989, 985287451, '$2y$10$pTtS.LfE53ehTCW7bzDvmeu1UMa1h9Kl8kJbvPhGbssWMt4h0Wmx6'),
-(6, 'Chiran', 'chiran@gmail.com', '253/B, Puwakwaththa, Aparekka, Matara.', 779980990, 982482380, '$2y$10$LGp9JfItKpJjgMwQ645WhOhog08xtWs/zAAJVsv7oBCDQcDiMiwMi'),
-(7, 'Saman', 'saman@gmail.com', 'Matara, Sri lanka.', 712243567, 2147483647, '$2y$10$8F8Q21ut.CpI9uBgK/4ADOfWjRJ/HLlCW.m1iXRpB5a2BW36cz.NG'),
-(8, 'Basil', 'basil@mail.com', 'Colombo, Sri Lanka', 117654675, 2147483647, '$2y$10$Ol18Vcsb43ifZ.PZnoSzPukKT.V/EshdyH.ugEww9OJ35T5QgJpQi');
-
 --
 -- Indexes for dumped tables
 --
@@ -130,18 +73,6 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`blog_id`);
 
 --
--- Indexes for table `itemtb`
---
-ALTER TABLE `itemtb`
-  ADD PRIMARY KEY (`item_id`);
-
---
--- Indexes for table `userinfo`
---
-ALTER TABLE `userinfo`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -150,18 +81,6 @@ ALTER TABLE `userinfo`
 --
 ALTER TABLE `blog`
   MODIFY `blog_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT for table `itemtb`
---
-ALTER TABLE `itemtb`
-  MODIFY `item_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `userinfo`
---
-ALTER TABLE `userinfo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

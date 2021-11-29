@@ -90,7 +90,7 @@
 
                         <div class="col-md-6">
                             <div class="card text-center shadow">
-                                <div class="card-header text-white" style="background:linear-gradient(to right, #000e05, #170e97, #5b19f5)">
+                                <div class="card-header text-white" style="background:linear-gradient(to right, #02163d, #170e97, #5b19f5)">
                                     <div class="row align-items-center">
                                         <div class="col">
                                             <i class="fab fa-blogger-b fa-2x"></i>
@@ -113,7 +113,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card text-center shadow">
-                                <div class="card-header text-white" style="background:linear-gradient(to right, #000e05, #170e97, #5b19f5)">
+                                <div class="card-header text-white" style="background:linear-gradient(to right, #02163d, #170e97, #5b19f5)">
                                     <div class="row align-items-center">
                                         <div class="col">
                                             <i class="fa fa-newspaper fa-2x"></i>

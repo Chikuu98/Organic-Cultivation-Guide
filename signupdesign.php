@@ -91,7 +91,6 @@
                         <input type="text" name="Address" placeholder="Address" class="form-control my-2">
                         <input type="Number" name="Mobile" placeholder="Mobile" class="form-control my-2">
                         <input type="Number" name="NIC_No" placeholder="National ID" class="form-control my-2">
-                        <input type="Number" name="Acc_No" placeholder="Bank Account No." class="form-control my-2">
                         <input type="password" name="Password" placeholder="Password" class="form-control">
                         <button class="btn btn-success mt-4" name="signup">Sign Up</button>
                     </form>

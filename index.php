@@ -41,44 +41,27 @@
 
             </ul>
     </div>
-  </div>
+  
 </nav>
-<br><br><br>
+
 <!---------------------------------home-cover------------------------------------------->
-<div class="rowh bg-success">
-                <div class="colh md-5">
-                    <h1 class="h1title">EcoJEE</h1>
-                    <p class="text-light">To promote agriculture and food systems that build healthy land, people, communities and quality of life, for present and future generations.
-                    </p>
-                    <a href="signupdesign.php"><button class="btn-home" type="button">Sign Up</button></a>
-                </div>
 
-
-                <div >
-                    <div class="card cd1 mx-5">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="card cd2 mx-5">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="colh">
-                    <div class="card cd3 mx-5">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="card cd4 mx-5">
-                        <h5>Farming</h5><br><br><br><br><br>
-                        <p class="p-cover">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-            </div>    
-
-
+<div class="row shadow" style="height: 90vh;">
+    <div class="col-md-6 text-center" style="background-image: url('assets/bgindex.jpg');">
+              <h1 class="text-light mt-5 pt-5 mb-5">Vision</h1>
+              <h3 class="text-light mx-5 px-5">
+              " To promote<br>agriculture and food systems<br>that build<br>healthy land, people, communities and quality of life ,<br>for present and future generations. "
+            </h3>
+        
+    </div>
+    <div class="col-6 text-center" style="background:#CAD5E2">
+    <h1 class="display-1 text-success mt-5 pt-5"><b>EcoJEE</b></h1>
+    <h1 class="display-2 text-success mt-5">Organic<br>
+        Cultivation Guide</h1>
+    </div>
 </div>
 
-    <!-----------x------------home-cover-------------------------x--------------------------->
+<!-----------x------------home-cover-------------------------x--------------------------->
    
     <br><br><br>
 
@@ -192,7 +175,7 @@
             </div>
             
             <hr class="hrf">
-            <p class="copyrightf">Chiran Jeewantha Vidanagamage <i class="far fa-copyright"></i> 2021 - All Rights Reserved</p>
+            <p class="copyrightf"><b>Chiran Jeewantha Vidanagamage <i class="far fa-copyright"></i> 2021 - All Rights Reserved</b></p>
         </footer>
     </section>
       <!-----------x--------------footer-----------------------x-------------------------->

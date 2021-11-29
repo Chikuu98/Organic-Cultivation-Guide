@@ -4,7 +4,7 @@
 
     if(isset($_POST['signup']))
     {
-        if(empty($_POST['Name']) || empty($_POST['Email']) || empty($_POST['Address']) || empty($_POST['Mobile']) || empty($_POST['NIC_No']) || empty($_POST['Acc_No']) || empty($_POST['Password']))
+        if(empty($_POST['Name']) || empty($_POST['Email']) || empty($_POST['Address']) || empty($_POST['Mobile']) || empty($_POST['NIC_No']) || empty($_POST['Password']))
         {
             header("location:../signupdesign.php?empty");
             exit();
@@ -16,7 +16,6 @@
             $Address= mysqli_real_escape_string($con,$_POST['Address']);
             $Mobile= mysqli_real_escape_string($con,$_POST['Mobile']);
             $NIC_No= mysqli_real_escape_string($con,$_POST['NIC_No']);
-            $Acc_No= mysqli_real_escape_string($con,$_POST['Acc_No']);
             $Password= mysqli_real_escape_string($con,$_POST['Password']);
 
             if(!preg_match("/^[a-zA-Z]*$/",$Name))
@@ -54,7 +53,7 @@
                         else
                         {
                             $Hash = password_hash($Password, PASSWORD_DEFAULT);
-                            $query = " insert into userinfo (Name,Email,Address,Mobile,NIC,AccNo,Password) values ('$Name', '$Email', '$Address', '$Mobile', '$NIC_No', '$Acc_No', '$Hash')";
+                            $query = " insert into userinfo (Name,Email,Address,Mobile,NIC,Password) values ('$Name', '$Email', '$Address', '$Mobile', '$NIC_No', '$Hash')";
                             $result = mysqli_query($con,$query);
                             header("location:../signupdesign.php?success");
                             exit();

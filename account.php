@@ -149,7 +149,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <h6>
-                                        <a href="#" class="text-success">Go to Account <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                        <a href="myAccount/addItem.php" class="text-success">Go to Account <i class="fa fa-arrow-alt-circle-right"></i></a>
                                     </h6>
                                 </div>
                             </div>

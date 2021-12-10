@@ -8,7 +8,7 @@ function component($itemname, $itemprice, $itemimg, $itemid, $itemdescptn){
                 <form action=\"cindex.php\" method=\"post\">
                     <div class=\"card shadow my-3\">
                         <div>
-                            <img src=\"$itemimg\" alt=\"Image1\" class=\"img-fluid card-img-top\">
+                            <img src=\"./upload/$itemimg\" alt=\"Image1\" class=\"img-fluid card-img-top\">
                         </div>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">$itemname</h5>
@@ -42,7 +42,7 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
                     <div class=\" border rounded shadow\">
                         <div class=\"row bg-white my-2 mx-2 \">
                             <div class=\"col-md-3 pl-0\">
-                                <img src=$itemimg alt=\"Image1\" class=\"img-fluid\">
+                                <img src=\"./upload/$itemimg\" alt=\"Image1\" class=\"img-fluid\">
                             </div>
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$itemname</h5>

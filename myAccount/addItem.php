@@ -24,7 +24,7 @@
 
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
-        <a href="blog.php" class="navbar-brand">
+        <a href="addItem.php" class="navbar-brand">
             <h3 class="px-5 ml-5">
             <i class="fas fa-user-alt"></i> <b><?php echo $name?></b>
             </h3>
@@ -51,6 +51,74 @@
 
     </nav>
 </header>
+
+<!---------------------- add a new item form --------------------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 m-auto">
+            <div class="card bg light mt-5">
+                <div class="card-title bg-success text-white mt-5">
+                    <h3 class="text-center py-2">Add Your New Item</h3>
+                </div>
+
+                    <!-- --------Display Empty fields------ -->
+                <?php
+
+                    if(isset($_GET['empty']))
+                    {
+                        $Message=$_GET['empty'];
+                        $Message=" Please Fill your item informations ";
+                    ?>
+                        <div class="alert alert-danger text-center"><?php echo $Message ?></div>
+                    <?php        
+                    }
+                ?>
+
+
+                     <!-- --------This item already added------ -->
+                     <?php
+
+                    if(isset($_GET['added']))
+                    {
+                        $Message=$_GET['added'];
+                        $Message=" Your item already added ";
+                    ?>
+                        <div class="alert alert-danger text-center"><?php echo $Message ?></div>
+                    <?php        
+                    }
+                    ?>
+
+                    <!-- --------add new item successed------ -->
+                    <?php
+
+                    if(isset($_GET['success']))
+                    {
+                        $Message=$_GET['success'];
+                        $Message=" Your item added successfully ";
+                    ?>
+                        <div class="alert alert-success text-center"><?php echo $Message ?></div>
+                    <?php        
+                    }
+                    ?>    
+
+                <div class="card-body">
+                    <form action="itemFormAction.php" method="POST" enctype="multipart/form-data">
+                        <input type="text" name="item_name" placeholder="Item Name" class="form-control my-2">
+                        <input type="Number" name="quantity" placeholder="Available Quantity" class="form-control my-2">
+                        <input type="Number" name="price" placeholder="item Price" class="form-control my-2">
+                        <input type="text" name="description" placeholder="Item Description" class="form-control my-2">
+                        <h6 class="text-secondary m-2">Upload Image</h6>
+                        <input type="file" name="iimg"><br>
+                        <button class="btn btn-success mt-4" name="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------end---------- add a new item form --------end---------->
 
 
 <!-- --------------footer--------------- -->

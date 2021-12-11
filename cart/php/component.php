@@ -48,7 +48,7 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
                                 <h5 class=\"pt-2\">$itemname</h5>
                                 <small class=\"text-secondary\">Seller: chikuu98</small>
                                 <h5>Rs.<span id=\"i_price\">$itemprice</span>.00<input type=\"hidden\" class=\"iprice\" value=\"$itemprice\"></h5>
-                                <button type=\"submit\" class=\"btn btn-success my-1 shadow\">More Details</button>
+                                <a href=\"https://www.w3schools.com?id=$itemid\" class=\"btn btn-success\">More Details</a>
                                 <button type=\"submit\" class=\"btn btn-danger mx-2 my-1 shadow\" name=\"remove\">Remove</button>
                             </div>
                             

@@ -54,7 +54,7 @@
 
 <!---------------------- add a new item form --------------------->
 
-<div class="container">
+<div class="container mb-5">
     <div class="row">
         <div class="col-lg-6 m-auto">
             <div class="card bg light mt-5">
@@ -68,7 +68,7 @@
                     if(isset($_GET['empty']))
                     {
                         $Message=$_GET['empty'];
-                        $Message=" Please Fill your item informations ";
+                        $Message=" $name, Please Fill your item informations ";
                     ?>
                         <div class="alert alert-danger text-center"><?php echo $Message ?></div>
                     <?php        
@@ -82,7 +82,7 @@
                     if(isset($_GET['added']))
                     {
                         $Message=$_GET['added'];
-                        $Message=" Your item already added ";
+                        $Message=" $name, Your item already added ";
                     ?>
                         <div class="alert alert-danger text-center"><?php echo $Message ?></div>
                     <?php        
@@ -95,7 +95,7 @@
                     if(isset($_GET['success']))
                     {
                         $Message=$_GET['success'];
-                        $Message=" Your item added successfully ";
+                        $Message=" Hey $name, Your item added successfully ";
                     ?>
                         <div class="alert alert-success text-center"><?php echo $Message ?></div>
                     <?php        
@@ -109,7 +109,8 @@
                         <input type="Number" name="price" placeholder="item Price" class="form-control my-2">
                         <input type="text" name="description" placeholder="Item Description" class="form-control my-2">
                         <h6 class="text-secondary m-2">Upload Image</h6>
-                        <input type="file" name="iimg"><br>
+                        <input type="file" name="iimg" class="form-control text-success"/>
+                        <!-- <input type="file" name="iimg"><br> -->
                         <button class="btn btn-success mt-4" name="submit">Submit</button>
                     </form>
                 </div>

@@ -1,6 +1,8 @@
+<?php session_start(); ?>
 <?php
 
     require_once('../includes/connection.php');
+    $uid=($_SESSION['U_ID']);
 
     if(isset($_POST['submit']))
 
@@ -39,7 +41,7 @@
             }
             else
             {
-                $query = " insert into itemtb (item_name,available_quantity,item_price,item_description,item_image) values ('$item_name', '$quantity', '$price', '$description', '$img')";
+                $query = " insert into itemtb (item_name,available_quantity,item_price,item_description,item_image,u_id) values ('$item_name', '$quantity', '$price', '$description', '$img', '$uid')";
                 $result = mysqli_query($con,$query);
                 header("location:addItem.php?success");
                 exit();

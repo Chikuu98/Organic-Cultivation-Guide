@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog</title>
+    <title>My Account</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="addItemFooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
     
 </head>
 
@@ -108,10 +109,34 @@
                         <input type="Number" name="quantity" placeholder="Available Quantity" class="form-control my-2">
                         <input type="Number" name="price" placeholder="item Price" class="form-control my-2">
                         <input type="text" name="description" placeholder="Item Description" class="form-control my-2">
-                        <h6 class="text-secondary m-2">Upload Image</h6>
-                        <input type="file" name="iimg" class="form-control text-success"/>
-                        <!-- <input type="file" name="iimg"><br> -->
-                        <button class="btn btn-success mt-4" name="submit">Submit</button>
+                        <h6 class="text-secondary m-2">Upload a Image</h6>
+                        <!-- <input type="file" name="iimg" class="form-control text-success"/> -->
+		
+			            <input type="file" class="text-secondary" name="img_file" id="img_file">
+
+	                   <div>
+                            <canvas id="canvas">
+				            Your browser does not support HTML5 Canvas
+			                </canvas>
+                        </div>
+                        		            
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label text-secondary" for="flexCheckDefault">
+                                image croped
+                            </label>
+                        </div>
+		                
+     
+                        <h6 class="text-secondary">Result</h6>
+		                <div id="result">
+			
+		                </div>
+                        <input type="hidden" name="file_name" id="file_name">
+			            <input type="hidden" name="cropped_img" id="cropped_img">
+
+                        
+                        <button class="btn btn-success mt-4" name="submit" id="submit"disabled>Submit</button>
                     </form>
                 </div>
             </div>
@@ -177,8 +202,9 @@
     <!-- ----------------footer close------------------- -->
 
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.js"></script>
+<script src="js/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

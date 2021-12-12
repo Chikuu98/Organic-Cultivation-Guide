@@ -1,49 +1,4 @@
-<?php
-
-session_start();
-
-require_once ('php/ConnectDb.php');
-require_once ('./php/component.php');
-
-
-// create instance of Connectdb class
-$database = new ConnectDb("final_project", "itemtb");
-
-if (isset($_POST['add'])){
-
-    if(isset($_SESSION['cart'])){
-
-        $item_array_id = array_column($_SESSION['cart'], "itemid");
-
-        if(in_array($_POST['itemid'], $item_array_id)){
-            echo "<script>alert('Product is already added in the cart..!')</script>";
-            echo "<script>window.location = 'cindex.php'</script>";
-        }else{
-
-            $count = count($_SESSION['cart']);
-            $item_array = array(
-                'itemid' => $_POST['itemid']
-            );
-
-            $_SESSION['cart'][$count] = $item_array;
-            
-        }
-
-    }else{
-
-        $item_array = array(
-                'itemid' => $_POST['itemid']
-        );
-
-        //  ------Create new session variable-----
-        $_SESSION['cart'][0] = $item_array;
-        // print_r($_SESSION['cart']);
-    }
-}
-
-
-?>
-
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -51,7 +6,7 @@ if (isset($_POST['add'])){
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>EcoJEE Shop</title>
+    <title>More Details</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
@@ -59,22 +14,51 @@ if (isset($_POST['add'])){
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="cindex.css">
-    <link rel="stylesheet" href="cartFooter.css">
+    <link rel="stylesheet" href="addItemFooter.css">
+    
 </head>
-<body>
 
-<?php require_once ("php/header.php"); ?>
-<div class="container">
-        <div class="row text-center py-5">
-            <?php
-                $result = $database->getData();
-                while ($row = mysqli_fetch_assoc($result)){
-                    component($row['item_name'], $row['item_price'], $row['item_image'], $row['item_id'], $row['item_description']);
-                }
-            ?>
+<body class="bg-light">
+
+<?php $name=($_SESSION['Name']);?>
+
+<header id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
+        <a href="MoreDetails.php" class="navbar-brand">
+            <h3 class="px-5 ml-5">
+            <i class="fas fa-user-alt"></i> <b>More Details</b>
+            </h3>
+        </a>
+        <button class="navbar-toggler"
+            type="button"
+                data-toggle="collapse"
+                data-target = "#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="mr-auto"></div>
+            <div class="navbar-nav mr-5">
+                <a href="cart.php" class="nav-item nav-link active mr-5">
+                    <h5 class="cart"><i class="fas fa-shopping-cart"></i></h5>
+                </a>    
+            </div>
         </div>
-</div>
+
+    </nav>
+</header>
+
+<!---------------------- add a new item form --------------------->
+
+
+                
+
+<!---------end---------- add a new item form --------end---------->
+
 
 <!-- --------------footer--------------- -->
 <section class="foot">

@@ -1,3 +1,15 @@
+#canvas {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #aaa;
+    cursor: default;
+}
+
+img {
+    max-width: 100%;
+}
+
+
 /* --------------- footer --------------- */
 
 footer {

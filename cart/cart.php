@@ -48,6 +48,9 @@ if (isset($_POST['remove_all'])){
 
     <link rel="stylesheet" href="cartFooter.css">
 
+    <!-----html to PDF----->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body class="bg-light">
 
@@ -90,7 +93,7 @@ if (isset($_POST['remove_all'])){
 
                   <!-- ----price details---- -->
         <div class="col-md-4 offset-md-1 border rounded mt-5 bg-white h-25 ">
-            <div class="pt-4 px-4 my-4 shadow ">
+            <div class="pt-4 px-4 my-4 shadow " id="print">
                 <h6 class="text-success text-center"><b>PRICE DETAILS</b></h6>
                 <hr>
                 <div class="row price-details py-4 my-4 ">
@@ -119,7 +122,7 @@ if (isset($_POST['remove_all'])){
                     <input class="form-check-input ml-1 mt-2" type="checkbox" value="" id="flexCheckChecked" checked>
                     <label class="form-check-label ml-4" for="flexCheckChecked">
                         <b class="text-secondary">Cash On Delivery</b>
-                        <button class="btn btn-success ml-4">Order Now</button>
+                        <button class="btn btn-success ml-4" id="download">Print Bill</button>
                     </label>
                     </div>
                 </div>
@@ -149,6 +152,20 @@ if (isset($_POST['remove_all'])){
     }
     subTotal();
 
+</script>
+
+<script>
+        window.onload = function(){
+
+            document.getElementById("download")
+            .addEventListener("click",()=> {
+
+            const print = this.document.getElementById("print");
+            console.log(print);
+            console.log(window);
+            html2pdf().from(print).save();
+            })
+        };
 </script>
 
 

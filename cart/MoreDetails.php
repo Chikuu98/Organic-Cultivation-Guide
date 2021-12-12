@@ -22,7 +22,8 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+    <!-----html to PDF----->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 </head>
 
@@ -80,30 +81,28 @@
 
 <!---------------------- details --------------------->
 
-<div class="container m-5">
-  <div class="row">
-    <div class="col-sm">
-      <!-- One of three columns -->
-    </div>
-    <div class="col-sm">
-        <?php echo "<img class= \"shadow\" src='upload/$line[item_image]' width=\"320\" height=\"180\">"; ?>
-        <h2 class="text-dark my-3"><b><?php echo $line['item_name']; ?></b></h2>
+<div class="container" >
+  <div class="row mt-5" id="print">
+    <div class="col-sm pl-5">
+        <h2 class="text-dark my-3 mb-5"><b><?php echo $line['item_name']; ?></b></h2>
         <h4 class="text-dark my-2">Available Quantity :  <b class="text-success"><?php echo $line['available_quantity']; ?></b></h4>
         <h4 class="text-dark my-2">Item Price :  <b class="text-danger">Rs. <?php echo $line['item_price']; ?>.00/=</b></h4>
-        <h6 class="text-dark my-2">Seller Name :  <?php echo $line['Name']; ?></h6>
+        <?php echo "<img class= \"shadow\" src='upload/$line[item_image]' width=\"320\" height=\"180\">"; ?>
+    </div>
+    <div class="col-sm">
+        <h6 class="text-dark mt-5">Seller Name :  <?php echo $line['Name']; ?></h6>
         <h6 class="text-dark my-2">Tel. No :  <?php echo $line['Mobile']; ?></h6>
         <h6 class="text-dark my-2">Seller Email :  <?php echo $line['Email']; ?></h6>
         <h6 class="text-dark my-2">Seller Address :  <?php echo $line['Address']; ?></h6>
-    </div>
-    <div class="col-sm">
-        <h6 class="text-success mb">Description :<br><br><p class="text-secondary"><?php echo $line['item_description']; ?></p></h6> 
+        <h6 class="text-success my-3">Description :<br><p class="text-secondary"><?php echo $line['item_description']; ?></p></h6>
+        <button class="btn btn-success text-light mt-5" id="download">Download Details</button> 
     </div>
   </div>
 </div>
 
 <!---------end---------- details --------end---------->
 
-    <!-- <script>
+    <script>
         window.onload = function(){
 
             document.getElementById("download")
@@ -115,7 +114,7 @@
             html2pdf().from(print).save();
             })
         };
-    </script> -->
+    </script>
 
 
 

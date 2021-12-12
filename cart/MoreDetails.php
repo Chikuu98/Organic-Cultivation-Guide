@@ -1,4 +1,12 @@
 <?php session_start(); ?>
+<?php require_once('../includes/connection.php'); ?>
+
+<?php
+
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,19 +22,17 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="addItemFooter.css">
+
     
 </head>
 
 <body class="bg-light">
 
-<?php $name=($_SESSION['Name']);?>
-
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
         <a href="MoreDetails.php" class="navbar-brand">
             <h3 class="px-5 ml-5">
-            <i class="fas fa-user-alt"></i> <b>More Details</b>
+            <i class="far fa-file-alt"></i> <b>More Details</b>
             </h3>
         </a>
         <button class="navbar-toggler"
@@ -52,67 +58,66 @@
     </nav>
 </header>
 
-<!---------------------- add a new item form --------------------->
+<!---------------------- php --------------------->
+    <?php
+        
+        if (isset($_GET['id'])){
 
-
-                
-
-<!---------end---------- add a new item form --------end---------->
-
-
-<!-- --------------footer--------------- -->
-<section class="foot">
-        <footer>
-        <div class="move-up">
-                <span><a href="#"><i style="color: white;" class="fas fa-arrow-circle-up fa-2x"></i></a></span>
-            </div>
-            <div class="rowf">
-                <div class="colf">
-                    <h3 class="logof"><i class="fab fa-pagelines" aria-hidden="true"></i><b> Cultivation Guide</b></h3>
-                    <p class="pf">To promote agriculture and food systems that build healthy land, people, communities and quality of life, for present and future generations.</p>
-                </div>
-                <div class="colf">
-                    <h3 class="h3f"><b>Address </b><div class="underlinef"><span class="spanf"></span></div></h3>
-                    <div class="addressf">
-                        <p class="pf">Yatiyana Road<br>
-                        Aparekka,Matara<br>
-                        Sothern Province, Sri Lanka</p>
-                    </div>
-                    <p class="email-idf">chiranjonline@gmail.com</p>
-                    <p>+94- 779980990</p>
-                </div>
-                <div class="colf">
-                    <h3 class="h3f"><b>Links </b><div class="underlinef"><span class="spanf"></span></div></h3>
-                    <ul class="ulf">
-                        <li class="lif"><a class="af" href="">Home</a></li>
-                        <li class="lif"><a class="af" href="">Buy & Sell</a></li>
-                        <li class="lif"><a class="af" href="">Blog</a></li>
-                        <li class="lif"><a class="af" href="">News & Inst.</a></li>
-                        <li class="lif"><a class="af" href="">Account</a></li>
-                    </ul>
-                </div>
-                <div class="colf">
-                    <h3 class="h3f"><b>Newsletter </b><div class="underlinef"><span class="spanf"></span></div></h3>
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <form class="frmf">             
-                        <input type="email" placeholder="Enter your  email" required>
-                        <Button type="submit"><i class="fas fa-arrow-right" aria-hidden="true"></i></Button>  
-                    </form>
-                    <div class="social-iconsf">
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-whatsapp-square"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                </div>
-            </div>
+            $id =$_GET['id'];
             
-            <hr class="hrf">
-            <p class="copyrightf">Chiran Jeewantha Vidanagamage <i class="far fa-copyright"></i> 2021 - All Rights Reserved</p>
-        </footer>
-    </section>
+            $con = mysqli_connect('localhost', 'root', '', 'final_project');
+            $sql = "SELECT * FROM itemtb INNER JOIN userinfo ON itemtb.u_id=userinfo.ID WHERE itemtb.item_id=$id";
 
-    <!-- ----------------footer close------------------- -->
+            $result = mysqli_query($con , $sql) or die( mysqli_error($con));
+            $line = mysqli_fetch_array($result);
+            // echo ($line['item_image']);
+        }
+
+  ?>   
+         
+
+<!---------end---------- php --------end---------->
+
+<!---------------------- details --------------------->
+
+<div class="container m-5">
+  <div class="row">
+    <div class="col-sm">
+      <!-- One of three columns -->
+    </div>
+    <div class="col-sm">
+        <?php echo "<img class= \"shadow\" src='upload/$line[item_image]' width=\"320\" height=\"180\">"; ?>
+        <h2 class="text-dark my-3"><b><?php echo $line['item_name']; ?></b></h2>
+        <h4 class="text-dark my-2">Available Quantity :  <b class="text-success"><?php echo $line['available_quantity']; ?></b></h4>
+        <h4 class="text-dark my-2">Item Price :  <b class="text-danger">Rs. <?php echo $line['item_price']; ?>.00/=</b></h4>
+        <h6 class="text-dark my-2">Seller Name :  <?php echo $line['Name']; ?></h6>
+        <h6 class="text-dark my-2">Tel. No :  <?php echo $line['Mobile']; ?></h6>
+        <h6 class="text-dark my-2">Seller Email :  <?php echo $line['Email']; ?></h6>
+        <h6 class="text-dark my-2">Seller Address :  <?php echo $line['Address']; ?></h6>
+    </div>
+    <div class="col-sm">
+        <h6 class="text-success mb">Description :<br><br><p class="text-secondary"><?php echo $line['item_description']; ?></p></h6> 
+    </div>
+  </div>
+</div>
+
+<!---------end---------- details --------end---------->
+
+    <!-- <script>
+        window.onload = function(){
+
+            document.getElementById("download")
+            .addEventListener("click",()=> {
+
+            const print = this.document.getElementById("print");
+            console.log(print);
+            console.log(window);
+            html2pdf().from(print).save();
+            })
+        };
+    </script> -->
+
+
 
 
 

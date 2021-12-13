@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2021 at 04:27 PM
+-- Generation Time: Dec 13, 2021 at 04:14 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.19
 
@@ -74,22 +74,24 @@ CREATE TABLE `itemtb` (
   `available_quantity` int(10) NOT NULL,
   `item_price` int(10) NOT NULL,
   `item_description` varchar(500) NOT NULL,
-  `item_image` varchar(500) NOT NULL
+  `item_image` varchar(500) NOT NULL,
+  `u_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `itemtb`
 --
 
-INSERT INTO `itemtb` (`item_id`, `item_name`, `available_quantity`, `item_price`, `item_description`, `item_image`) VALUES
-(1, 'Dry Beans (100g)', 200, 60, 'demo description to this item', './upload/seeds1.jpg'),
-(2, 'Green Chili (plant)', 20, 45, 'demo description to this item', './upload/seeds2.jpg'),
-(3, 'Microgreens (plant)', 50, 85, 'demo description to this item', './upload/seeds3.jpg'),
-(4, 'Capsicum (plant)', 100, 50, 'demo description to this item', './upload/seeds4.jpg'),
-(5, 'Asian Greens (plant)', 300, 65, 'demo description to this item', './upload/seeds5.jpg'),
-(6, 'Bush Beans (5 pees)', 60, 120, 'demo description to this item', './upload/seeds6.jpg'),
-(7, 'Celeriac (plant)', 40, 70, 'demo description to this item', './upload/seeds7.jpg'),
-(8, 'Kidney Bean (100g)', 50, 25, 'demo description to this item', './upload/seeds8.jpg');
+INSERT INTO `itemtb` (`item_id`, `item_name`, `available_quantity`, `item_price`, `item_description`, `item_image`, `u_id`) VALUES
+(1, 'Dry Beans (100g)', 150, 60, 'demo description to this item', 'seeds1.jpg', 6),
+(2, 'Green Chili (plant)', 20, 45, 'demo description to this item', 'seeds2.jpg', 6),
+(3, 'Microgreens (plant)', 50, 85, 'demo description to this item', 'seeds3.jpg', 6),
+(4, 'Capsicum (plant)', 100, 50, 'demo description to this item', 'seeds4.jpg', 6),
+(5, 'Asian Greens (plant)', 300, 65, 'demo description to this item', 'seeds5.jpg', 6),
+(6, 'Bush Beans (5 pees)', 60, 120, 'demo description to this item', 'seeds6.jpg', 3),
+(7, 'Celeriac (plant)', 40, 70, 'demo description to this item', 'seeds7.jpg', 4),
+(8, 'Kidney Bean (100g)', 50, 25, 'demo description to this item', 'seeds8.jpg', 5),
+(22, 'Test1', 60, 70, 'test description', 'istockphoto-179751167-170667a.jpg', 7);
 
 -- --------------------------------------------------------
 
@@ -155,7 +157,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT for table `itemtb`
 --
 ALTER TABLE `itemtb`
-  MODIFY `item_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `item_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `userinfo`

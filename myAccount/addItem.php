@@ -19,7 +19,7 @@
     
 </head>
 
-<body class="bg-light">
+<body style="background:linear-gradient(to right, #068637,#87f894,#068637)">
 
 <?php $name=($_SESSION['Name']);?>
 

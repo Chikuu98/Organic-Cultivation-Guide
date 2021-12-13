@@ -49,7 +49,8 @@ class ConnectDb
 
     // get items from the database
     public function getData(){
-        $sql = "SELECT * FROM $this->tablename";
+        // $sql = "SELECT * FROM $this->tablename";
+        $sql = "SELECT * FROM itemtb INNER JOIN userinfo ON itemtb.u_id=userinfo.ID";
 
         $result = mysqli_query($this->con, $sql);
 

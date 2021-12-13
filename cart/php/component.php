@@ -36,7 +36,7 @@ function component($itemname, $itemprice, $itemimg, $itemid, $itemdescptn){
     echo $element;
 }
 
-function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
+function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt, $sellerName){
     $element = "
     <form action=\"cart.php?action=remove&id=$itemid\" method=\"post\" class=\"cart-items\">
                     <div class=\" border rounded shadow\">
@@ -46,7 +46,7 @@ function cartElement($itemimg, $itemname, $itemprice, $itemid, $qtt){
                             </div>
                             <div class=\"col-md-6\">
                                 <h5 class=\"pt-2\">$itemname</h5>
-                                <small class=\"text-secondary\">Seller: chikuu98</small>
+                                <small class=\"text-secondary\">Seller: $sellerName</small>
                                 <h5>Rs.<span id=\"i_price\">$itemprice</span>.00<input type=\"hidden\" class=\"iprice\" value=\"$itemprice\"></h5>
                                 <a href=\"../cart/MoreDetails.php?id=$itemid\" class=\"btn btn-success\">More Details</a>
                                 <button type=\"submit\" class=\"btn btn-danger mx-2 my-1 shadow\" name=\"remove\">Remove</button>

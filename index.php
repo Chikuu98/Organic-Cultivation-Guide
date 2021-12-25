@@ -46,18 +46,21 @@
 
 <!---------------------------------home-cover------------------------------------------->
 
-<div class="row shadow" style="height: 90vh;">
-    <div class="col-md-6 text-center" style="background-image: url('assets/bgindex.jpg');">
-              <h1 class="text-light mt-5 pt-5 mb-5">Vision</h1>
+<div class="row shadow" style="height: 90vh; background:#27ae60">
+    <div class="col-md-7 text-center" style="background-image: url('assets/bgindex2.png');">
+              <!-- <h1 class="text-light mt-5 pt-5 mb-5">Vision</h1>
               <h3 class="text-light mx-5 px-5">
               " To promote<br>agriculture and food systems<br>that build<br>healthy land, people, communities and quality of life ,<br>for present and future generations. "
-            </h3>
+            </h3> -->
         
     </div>
-    <div class="col-6 text-center" style="background:#CAD5E2">
-    <h1 class="display-1 text-success mt-5 pt-5"><b>EcoJEE</b></h1>
-    <h1 class="display-2 text-success mt-5">Organic<br>
-        Cultivation Guide</h1>
+    <div class="col-5 text-center" style="background:#27ae60">
+    <h1 class="display-1 text-light mt-5 pt-5"><b>EcoJEE</b></h1>
+    <h1 class="display-4 text-light mt-5">Organic<br>Cultivation Guide</h1>
+    <a href="http://localhost/organic/signupdesign.php">
+    <button class=" btn btn-light text-success my-3"><h4>Join Now</h4></button>  
+    </a>
+      
     </div>
 </div>
 

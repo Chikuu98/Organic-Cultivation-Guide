@@ -1,0 +1,186 @@
+/* --------------- footer --------------- */
+
+footer {
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #0e1310, #0f572a, #03a113);
+    color: #fff;
+    padding: 60px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: 'poppins', sans-serif;
+}
+
+.rowf {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.colf {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.colf:nth-child(2),
+.colf:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.logof {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.colf h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-idf {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.ulf {
+    padding: 0 0 0 0;
+}
+
+.ulf .lif {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.ulf .lif .af {
+    text-decoration: none;
+    color: #fff;
+}
+
+.frmf {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.frmf input {
+    width: 100%;
+    background: transparent;
+    color: rgb(236, 234, 234);
+    border: 0;
+    outline: none;
+}
+
+.frmf button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.frmf button .fas {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-iconsf .fab {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 6px;
+}
+
+.hrf {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyrightf {
+    text-align: center;
+}
+
+.underlinef {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underlinef .spanf {
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.logof,
+.h3f,
+.pf,
+.email-idf,
+.copyrightf {
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+}
+
+.h3f,
+.logof {
+    font-size: 15px;
+}
+
+@media (max-width:700px) {
+    footer {
+        bottom: unset;
+    }
+    .colf {
+        flex-basis: 100%;
+    }
+    .colf:nth-child(2),
+    .colf:nth-child(3) {
+        flex-basis: 100%;
+    }
+    .copyrightf {
+        text-align: center;
+        font-size: 1.5vh;
+    }
+}
+
+.move-up {
+    text-align: right;
+    padding-right: 50px;
+}
+
+
+/* -------x------- footer ---------x----- */
+
+html {
+    scroll-behavior: smooth;
+}

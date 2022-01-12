@@ -31,7 +31,7 @@
 
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
-        <a href="MoreDetails.php" class="navbar-brand">
+        <a href="#" class="navbar-brand">
             <h3 class="px-5 ml-5">
             <i class="far fa-file-alt"></i> <b>More Details</b>
             </h3>

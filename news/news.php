@@ -14,7 +14,7 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="addItemFooter.css">
+    <link rel="stylesheet" href="newsFooter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
     
 </head>
@@ -24,10 +24,10 @@
 <?php $name=($_SESSION['Name']);?>
 
 <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
-        <a href="addItem.php" class="navbar-brand">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #013243, #1989d3,#013243)">
+        <a href="news.php" class="navbar-brand">
             <h3 class="px-5 ml-5">
-            <i class="fas fa-user-alt"></i> <b><?php echo $name?></b>
+            <i class="fa fa-newspaper fa-1x"></i> <b>News</b>
             </h3>
         </a>
         <button class="navbar-toggler"

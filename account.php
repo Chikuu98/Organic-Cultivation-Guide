@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <h6>
-                                        <a href="#" class="text-primary">View News <i class="fa fa-arrow-alt-circle-right"></i></a>
+                                        <a href="news/news.php" class="text-primary">View News <i class="fa fa-arrow-alt-circle-right"></i></a>
                                     </h6>
                                 </div>
                             </div>

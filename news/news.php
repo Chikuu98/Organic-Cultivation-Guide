@@ -23,59 +23,58 @@
                 </a>
             </div>
         </nav>
+        <div class="latest-news">
+            <h1>Latest News Updates</h1>
+        </div>
     </section>
+    <!--------------- php ------------>
 
+<?php
+	// connecting to the database
+	$connection = mysqli_connect('localhost', 'root', '', 'final_project');
+	// checking the connection
+	if ( !$connection ) {
+		die("Error - database connection failed");
+	}
+
+	// preparing a list of previous news
+	$query  = "SELECT * FROM news ORDER BY news_id DESC LIMIT 15";
+	$result_set = mysqli_query($connection, $query);
+
+	if ( $result_set ) {
+		if ( mysqli_num_rows($result_set) > 0 ) {
+			while ( $result = mysqli_fetch_assoc($result_set) ) {
+				?>
 <!------------------news-------------------->
     <div class="news">
         <div class="news-card">
             <div class="card-img">
-                <img src="images/img2.jpg" alt="">
+                <img src="<?php echo $result['news_img']; ?>" alt="">
             </div>
             <div class="news-info">
                 <div class="news-date">
-                    <span>Sunday</span>
-                    <span>February 26 2022</span>
+                    <span><?php echo $result['weekday']; ?></span>
+                    <span><?php echo $result['date']; ?></span>
                 </div>
-                <h1 class="news-title">Eco News</h1>
-                <p class="short-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum iure at accusamus dolor quasi rem dolore mollitia nulla deserunt, sed soluta eligendi. Deserunt ea, saepe sapiente deleniti consectetur tempore in!</p>
-                <a href="#" class="news-link">Read More</a>
+                <h1 class="news-title"><?php echo $result['news_title']; ?></h1>
+                <p class="short-text"><?php echo $result['short_news']; ?>...</p>
+                <a href="<?php echo $result['news_link']; ?>" class="news-link">Read More</a>
             </div>
         </div>
     </div>
+<!--------*---------news close---*---------->
+                <?php
+			}
+		} else {
+			// no records found			
+		}		
+	} else {
+		// datbase query failed		
+	}
+?>
 
-    <div class="news">
-        <div class="news-card">
-            <div class="card-img">
-                <img src="images/img2.jpg" alt="">
-            </div>
-            <div class="news-info">
-                <div class="news-date">
-                    <span>Sunday</span>
-                    <span>February 26 2022</span>
-                </div>
-                <h1 class="news-title">Eco News</h1>
-                <p class="short-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum iure at accusamus dolor quasi rem dolore mollitia nulla deserunt, sed soluta eligendi. Deserunt ea, saepe sapiente deleniti consectetur tempore in!</p>
-                <a href="#" class="news-link">Read More</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="news">
-        <div class="news-card">
-            <div class="card-img">
-                <img src="images/img2.jpg" alt="">
-            </div>
-            <div class="news-info">
-                <div class="news-date">
-                    <span>Sunday</span>
-                    <span>February 26 2022</span>
-                </div>
-                <h1 class="news-title">Eco News</h1>
-                <p class="short-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum iure at accusamus dolor quasi rem dolore mollitia nulla deserunt, sed soluta eligendi. Deserunt ea, saepe sapiente deleniti consectetur tempore in!</p>
-                <a href="#" class="news-link">Read More</a>
-            </div>
-        </div>
-    </div>
+<!--------------- php close ------------>
+    
     
 <!--------------------------footer---------------------->
     <footer>

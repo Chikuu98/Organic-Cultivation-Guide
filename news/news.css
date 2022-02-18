@@ -57,6 +57,18 @@
     }
     /* -------x------- navbar ---------x----- */
     
+    .latest-news {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #030435;
+        padding: 0 2rem;
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    
     body {
         background-color: #eee;
     }

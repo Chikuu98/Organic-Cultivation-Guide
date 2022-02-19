@@ -121,7 +121,7 @@
                                         <div class="col">
                                             <h3 class="display-3">03</h3>
                                         </div>
-                                        <h4 class="my-2">News</h4>
+                                        <h4 class="my-2">Eco News</h4>
                                     </div>
 
                                 </div>

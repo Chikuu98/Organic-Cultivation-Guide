@@ -6,15 +6,6 @@
 
     if(isset($_POST['submit']))
 
-            //image uploading part
-            // $file_name = $_FILES['iimg']['name'];
-            // $file_type = $_FILES['iimg']['type'];
-            // $file_size = $_FILES['iimg']['size'];
-            // $temp_name = $_FILES['iimg']['tmp_name'];
-            
-            // $upload_to = '../cart/upload/';
-            // move_uploaded_file($temp_name, $upload_to . $file_name);
-
             $file_name = $_POST['file_name'];
             $base64_img = $_POST['cropped_img'];
     

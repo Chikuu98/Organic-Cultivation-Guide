@@ -19,9 +19,13 @@
     
 </head>
 
-<body style="background:linear-gradient(to right, #068637,#87f894,#068637)">
+<body style="background:#E7FEED">
 
 <?php $name=($_SESSION['Name']);?>
+
+<?php $u_id=($_SESSION['U_ID']);?>
+
+
 
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark shadow" style="background:linear-gradient(to right, #033115, #19f533,#033115)">
@@ -57,8 +61,8 @@
 
 <div class="container mb-5">
     <div class="row">
-        <div class="col-lg-6 m-auto">
-            <div class="card bg light mt-5">
+        <div class="col-lg-6 m-auto ">
+            <div class="card bg light mt-5 shadow">
                 <div class="card-title bg-success text-white mt-5">
                     <h3 class="text-center py-2">Add Your New Item</h3>
                 </div>
@@ -142,9 +146,62 @@
             </div>
         </div>
     </div>
+<!---------end---------- add a new item form --------end---------->
+<!----------------your items to delete start--------------->
+<h1 class="text-danger text-center mt-5 mb-3">Your Items List</h1>
+<div class="row">
+        <div class="col-lg-6 m-auto ">
+            <div class="card bg light mt-5 shadow">
+    <!--------------- php ------------>
+
+    <?php
+	// connecting to the database
+	$connection1 = mysqli_connect('localhost', 'root', '', 'final_project');
+	// checking the connection
+	if ( !$connection1 ) {
+		die("Error - database connection failed");
+	}
+
+	// preparing list of items
+	$query1  = "SELECT * FROM itemtb WHERE u_id = $u_id";
+	$result_set = mysqli_query($connection1, $query1);
+
+	if ( $result_set ) {
+		if ( mysqli_num_rows($result_set) > 0 ) {
+			while ( $result = mysqli_fetch_assoc($result_set) ) {
+				?>
+<!------------------item-------------------->
+<div class="row my-2">
+                    <div class="col-lg-6 m-auto text-center text-success">
+                        <h4><?php echo $result['item_name']; ?></h4>
+                    </div>
+                    <div class="col-lg-6 m-auto text-center">
+                        <form action="deleteItem.php?d_id=<?php echo $result['item_id']; ?>" method="POST" enctype="multipart/form-data">
+                            <button class="btn btn-danger" name="deleteI" id="deleteI">delete this item</button>
+                        </form>    
+                    </div>
+                </div>
+<!--------*---------item close---*---------->
+                <?php
+			}
+		} else {
+			// no records found	
+            ?><h5 class="text-warning text-center mt-3 mb-3" >item list empty</h5>	<?php
+		}		
+	} else {
+		// datbase query failed		
+	}
+?>
+
+<!--------------- php close ------------>
+
+            </div>
+        </div>
 </div>
 
-<!---------end---------- add a new item form --------end---------->
+<!-----------------your items to delete end---------------->
+</div>
+
 
 
 <!-- --------------footer--------------- -->

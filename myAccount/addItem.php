@@ -173,11 +173,11 @@
 <!------------------item-------------------->
 <div class="row my-2">
                     <div class="col-lg-6 m-auto text-center text-success">
-                        <h4><?php echo $result['item_name']; ?></h4>
+                        <h5><?php echo $result['item_name']; ?></h5>
                     </div>
                     <div class="col-lg-6 m-auto text-center">
                         <form action="deleteItem.php?d_id=<?php echo $result['item_id']; ?>" method="POST" enctype="multipart/form-data">
-                            <button class="btn btn-danger" name="deleteI" id="deleteI">delete this item</button>
+                            <button class="btn btn-danger" name="deleteI" id="deleteI">delete item</button>
                         </form>    
                     </div>
                 </div>

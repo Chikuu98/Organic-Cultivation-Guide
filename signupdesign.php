@@ -89,8 +89,8 @@
                         <input type="text" name="Name" placeholder="Name" class="form-control my-2">
                         <input type="text" name="Email" placeholder="Email" class="form-control my-2">
                         <input type="text" name="Address" placeholder="Address" class="form-control my-2">
-                        <input type="Number" name="Mobile" placeholder="Mobile" class="form-control my-2">
-                        <input type="Number" name="NIC_No" placeholder="National ID" class="form-control my-2">
+                        <input type="Number" name="Mobile" placeholder="Mobile" max="9999999999" class="form-control my-2">
+                        <input type="Number" name="NIC_No" placeholder="National ID" max="999999999999" class="form-control my-2">
                         <input type="password" name="Password" placeholder="Password" class="form-control">
                         <button class="btn btn-success mt-4" name="signup">Sign Up</button>
                     </form>

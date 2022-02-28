@@ -80,9 +80,7 @@
                                 <img src="./assets/home-img/blog.png">
                             </div>
                             <h4 class="h4about">Blog</h4>
-                            <p class="pabout">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                                Exercitationem fugit animi magni sunt vero maxime ullam obcaecati! 
-                                Ipsa numquam minus odit explicabo. 
+                            <p class="pabout">You can improve your knowledge and learn about organic cultivation technology by visiting our blog page. It contains very important articles.
                             </p>
                         </div>
                         <div class="shadowOne"></div>
@@ -96,9 +94,7 @@
                                 <img src="./assets/home-img/cart.png">
                             </div>
                             <h4 class="h4about">Buy & Sell</h4>
-                            <p class="pabout">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                                Exercitationem fugit animi magni sunt vero maxime ullam obcaecati! 
-                                Ipsa numquam minus odit explicabo.
+                            <p class="pabout">You can easily buy and sell anything related to organic farming by visiting our web page. It also gives you the ability to get in touch with sellers and contact them directly.
                             </p>
                         </div>
                         <div class="shadowOne"></div>
@@ -112,9 +108,7 @@
                                 <img src="./assets/home-img/news.png">
                             </div>
                             <h4 class="h4about">News</h4>
-                            <p class="pabout">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                                Exercitationem fugit animi magni sunt vero maxime ullam obcaecati! 
-                                Ipsa numquam minus odit explicabo.
+                            <p class="pabout">You can find the latest information and news related to organic farming by visiting our Eco news page. It also contains information about authorized agencies.
                             </p>
                         </div>
                         <div class="shadowOne"></div>
